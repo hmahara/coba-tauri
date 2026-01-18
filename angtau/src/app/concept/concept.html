@@ -1,2 +1,27 @@
-<p>concept works!</p>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+<div>
+    <a routerLink="/dashboard" matButton="filled">
+        Dashboard
+    </a>
+</div>
+
+<div class="container">
+  <h1>Angular 21, Signal, Tauri 2.0 </h1>
+  <h2>{{ count() }}</h2>
+  <div class="even-odd-indicator {{ isEven() ? 'even' : 'odd' }}">
+    @if (isEven()) {
+      Even
+    } @else {
+      Odd
+    }
+  </div>
+  <div class="buttons">
+    <button (click)="decrement()">-</button>
+    <button (click)="increment()">+</button>
+  </div>
+
+  <div class="buttons">
+    <p></p>
+    <mat-slide-toggle [(ngModel)]="isChecked">Toggle me! : {{isChecked}} </mat-slide-toggle>
+  </div>
+</div>

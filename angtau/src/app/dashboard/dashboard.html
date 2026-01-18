@@ -1,0 +1,21 @@
+
+<div>
+    <a routerLink="/c" matButton="filled">
+        Concept
+    </a>
+</div>
+
+<div class="user-profile">
+      <h1>User Dashboard</h1>
+      <div class="status-indicator" [class]="userStatus()">
+        <span class="status-dot"></span>
+        Status: {{ userStatus() }}
+      </div>
+
+      <div class="status-controls">
+    <!-- Add bindings to the existing buttons: -->
+    <button (click)="goOnline()" [disabled]="userStatus() === 'online'">Go Online</button>
+    <button (click)="goOffline()" [disabled]="userStatus() === 'offline'">Go Offline</button>
+    <button (click)="toggleStatus()" class="toggle-btn">Toggle Status</button>
+      </div>
+    </div>
